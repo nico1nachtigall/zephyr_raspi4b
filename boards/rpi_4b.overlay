@@ -1,0 +1,16 @@
+/ {
+    aliases {
+        led1 = &led_1;
+    };
+
+    leds {
+        led_1: led-1 {
+            gpios = <&gpio0 23 GPIO_ACTIVE_HIGH>; /* GPIO 23 */
+            label = "LED1";
+        };
+    };
+};
+
+&gpio0 {
+	status = "okay";
+};
